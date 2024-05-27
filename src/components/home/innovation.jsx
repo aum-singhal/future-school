@@ -1,6 +1,7 @@
 import "./home.css";
 import interview from "../../assets/interview.jpeg"
 import blog from "../../assets/blog.webp";
+import { Fade } from "react-awesome-reveal";
 
 export const HomeInnovation = () => {
   const interviews = [
@@ -18,6 +19,7 @@ export const HomeInnovation = () => {
     {title: "blog 1", img: blog, desc: "lorem Ipsum is Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum"},
   ]
   return <div className="home-innovation section flex-d-col">
+    <Fade triggerOnce direction="up">
     <div className="interviews flex-d-col">
       <div className="heading font-48 semi-bold">Our Voices</div>
 
@@ -34,11 +36,14 @@ export const HomeInnovation = () => {
         }
       </div>
     </div>
+    </Fade>
 
+    <Fade triggerOnce direction="up">
     <div className="blogs flex-d-col">
       <div className="heading font-48 semi-bold">Our Blogs</div>
 
       <div className="card-holder flex">
+        <Fade triggerOnce direction="up" cascade damping={0.3}>
         {
           blogs.map((item, index) => {
             return <div className="card" key={index}>
@@ -53,7 +58,9 @@ export const HomeInnovation = () => {
             </div>
           })
         }
+        </Fade>
       </div>
     </div>
+    </Fade>
   </div>
 }

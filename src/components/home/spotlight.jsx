@@ -1,5 +1,6 @@
 import "./home.css";
 import school from "../../assets/school.jpeg";
+import { Fade } from "react-awesome-reveal";
 
 export const HomeSpotlight = () => {
   const schoolData = [
@@ -18,26 +19,30 @@ export const HomeSpotlight = () => {
   ]
 
   return <div className="home-spotlight flex-d-col section">
-    <div className="head semi-bold font-48">
-      Featuring
+    <Fade triggerOnce direction="up">
+      <div className="head semi-bold font-48">
+        Featuring
 
-      <div className="sub-heading regular-bold font-16 flex-a-cen-j-spbet">
-        <div className="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
-        <div className="view-all semi-bold text-underline cursor-pointer">View All ↗</div>
+        <div className="sub-heading regular-bold font-16 flex-a-cen-j-spbet">
+          <div className="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+          <div className="view-all semi-bold text-underline cursor-pointer">View All ↗</div>
+        </div>
       </div>
-    </div>
+    </Fade>
 
     <div className="card-container flex-a-cen-j-spevn flex-wrap">
-      {
-        schoolData.map((item, index) => {
-          return index < 8? <div className="card" key={index}>
-            <div className="image-container">
-              <img className="image" src={item.cover} />
-            </div>
-            <div className="name font-26 semi-bold">{item.name}</div>
-          </div>: ""
-        })
-      }
+      <Fade triggerOnce direction="up" cascade damping={0.2}>
+        {
+          schoolData.map((item, index) => {
+            return index < 8? <div className="card" key={index}>
+              <div className="image-container">
+                <img className="image" src={item.cover} />
+              </div>
+              <div className="name font-26 semi-bold">{item.name}</div>
+            </div>: ""
+          })
+        }
+      </Fade>
     </div>
   </div>
 }

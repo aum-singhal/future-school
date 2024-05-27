@@ -22,6 +22,3 @@ export const HomeLanding = () => {
     </div>
   </div>
 }
-
-// 1234567890aqwsdefrgtyhjukilop;[']
-//
