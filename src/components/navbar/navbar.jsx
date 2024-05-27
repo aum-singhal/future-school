@@ -8,6 +8,6 @@ export const Navbar = () => {
       <div className="item">About Us</div>
       <div className="item">Blogs</div>
     </div>
-    <button className="join">Join Now</button>
+    <button className="join cursor-pointer">Join Now</button>
   </div>
 }

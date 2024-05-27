@@ -18,7 +18,26 @@
 
     .item{
       cursor: pointer;
+      padding: .3rem .5rem;
+      transition: .3s;
+      position: relative;
 
+      &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: #444;
+        transition: .25s;
+      }
+
+      &:hover{
+        &::after{
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -27,5 +46,11 @@
     padding: .625rem 1.5rem;
     border-radius: 10rem;
     border: 0 solid;
+    box-shadow: 0 .125rem .5rem 0rem #aaa ;
+
+    &:hover{
+      transform: scale(1.04);
+      box-shadow: 0 0 .75rem 0 #bbb;
+    }
   }
 }
