@@ -40,10 +40,10 @@ export const HomeInnovation = () => {
 
     <Fade triggerOnce direction="up">
     <div className="blogs flex-d-col">
-      <div className="heading font-48 semi-bold">Our Blogs</div>
+      <div className="heading font-48 semi-bold text-center">Our Blogs</div>
 
       <div className="card-holder flex">
-        <Fade triggerOnce direction="up" cascade damping={0.3}>
+        <Fade triggerOnce direction="up" cascade damping={0.1}>
         {
           blogs.map((item, index) => {
             return <div className="card" key={index}>

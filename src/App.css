@@ -12,19 +12,26 @@
   width: 100%;
   scroll-behavior: smooth;
 
-  .home-page{
-    padding-top: 4rem;
-  }
-
   .copyright{
-    background-color: black;
-    padding: .75rem 1rem;
+    background-color: var(--sec-blue);
+    padding: 1.5rem 1rem;
+    position: relative;
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 10%;
+      width: 80%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--sec-blue) 0%, rgba(255, 255, 255,1) 50%, var(--sec-blue) 100%);
+    }
   }
 }
 
 .section{
   margin: 0 auto;
-  width: calc(100% - 160px);
+  width: calc(100% - 18%);
 }
 
 .color-white{color: white;}

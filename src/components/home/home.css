@@ -1,59 +1,104 @@
 
 .home-landing{
   gap: 3rem;
-  padding: 4rem 0;
+  padding: 6rem 7%;
+  padding-top: 9rem;
+  position: relative;
+
+  .svg-container{
+    background: rgb(126, 138, 255);
+    background: linear-gradient(140deg, rgb(126, 138, 255) 20%, rgb(109, 123, 255) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 0 8rem;
+    z-index: -1;
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 16rem;
+      height: 16rem;
+      background-color: rgb(109,123,255);
+      z-index: -1;
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 16rem;
+      height: 16rem;
+      background-color: #fff;
+      border-radius: 0 16rem 0 0;
+    }
+  }
+
 
   .image-container{
-    width: 100%;
-    height: 370px;
-    border-radius: 1.25rem;
-    overflow: hidden;
-
+    width: 42%;
 
     .image{
       width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
   }
 
   .heading-container{
     align-items: flex-start;
+    width: 50%;
+    gap: 1rem;
+    color: white;
 
     .heading{
-      width: 60%;
+      width: 15ch;
       line-height: 4rem;
-      color: var(--text-green)
+      color: white;
+      text-transform: capitalize;
     }
 
     .sub-heading{
-      width: 40%;
+      width: 100%;
       gap: 1.5rem;
 
       .join{
+        background-color: white;
+        width: 70%;
+        padding: .5rem;
+        border-radius: 1.5rem;
 
         input{
           width: 70%;
           padding: 12px 0;
           cursor: pointer;
           color: black;
-          border-radius: 10rem 0 0 10rem;
           border: 0;
           padding: .25rem .75rem;
           background-color: transparent;
-          border-top: 1px solid #aaa;
-          border-bottom: 1px solid #aaa;
-          border-left: 1px solid #aaa;
+          font-size: 1.125rem;
+
+          &:focus, &:active{
+            border: 0;
+            outline: none;
+          }
         }
 
         button{
-          width: 100px;
-          padding: 12px 0;
-          background: var(--sec-green);
+          width: 120px;
+          padding: 1rem 0;
+          background: #6776ff;
           cursor: pointer;
           color: white;
-          border-radius: 0 10rem 10rem 0;
+          border-radius: 1rem;
           border: 0;
+
+          &:hover{
+            background-color: rgb(126, 138, 255);
+          }
         }
       }
     }
@@ -61,9 +106,15 @@
 }
 
 .home-ribbon-stats{
-  padding: 1rem 3.5rem;
   justify-content: space-around;
+  
   .item{
+    position: relative;
+    background-color: #edeeff;
+    border-radius: 2rem;
+    top: -3rem;
+    padding: 1.5rem 3rem;
+    text-align: center;
 
     .font-32{
       font-weight: 600;
@@ -77,19 +128,64 @@
 }
 
 .home-spotlight{
-  padding: 4rem 0 6rem 0;
-  gap: 3rem;
+  padding: 4rem 2rem 6rem 2rem;
+  gap: 1.5rem;
+
+  .info-container{
+    width: 100%;
+    height: 520px;
+    margin-top: 1.5rem;
+    border-radius: 4rem;
+    box-shadow: 0px 8px 24px -15px rgba(0,0,0,0.79);
+
+    .left{
+      width: 40%;
+      height: 100%;
+      border-radius: 4rem 0 0 4rem;
+      overflow: hidden;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .right{
+      width: 60%;
+      height: 100%;
+      border-radius: 0 4rem 4rem 0;
+      overflow: hidden;
+      padding: 7% 4rem;
+      /* background-color: rgb(234, 240, 255); */
+      background-color: #eee;
+      
+      .name{
+        font-size: 3rem;
+        margin-bottom: .75rem;
+      }
+
+      .desc{
+        font-size: 1.25rem;
+      }
+    }
+  }
 
   .card-container{
     gap: 1.5rem;
+    overflow-x: auto;
+    padding: .5rem;
+    padding-bottom: 2rem;
+    width: 90%;
+    margin: 0 auto;
 
     .card{
-      width: 300px;
-      height: 240px;
+      width: 250px;
+      height: 165px;
       border-radius: 1.25rem;
       position: relative;
       overflow: hidden;
       cursor: pointer;
+      box-shadow: 0px 10px 24px -15px rgba(0,0,0,0.79);
 
       .image-container{
         width: 100%;
@@ -113,7 +209,6 @@
       }
 
       &:hover{
-        transform: scale(1.035);
         .image-container{
           img{
             opacity: .85;
@@ -122,50 +217,16 @@
       }
     }
   }
-
-  .show-all{
-    transition: .3s;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0, 0.2);
-    z-index: 12;
-    backdrop-filter: blur(1rem);
-    padding: 3rem 4rem;
-
-    .card-container{
-      background-color: white;
-      border-radius: 1.25rem;
-      overflow: scroll;
-      width: 100%;
-      height: 100%;
-      padding: 5rem 4rem;
-      justify-content: space-evenly;
-
-      .card{
-        width: 350px;
-      }
-    }
-
-    .close{
-      position: absolute;
-      top: 4rem;
-      right: 5rem;
-    }
-  }
-
-  .show-all-none{
-    display: none;
-    transition: .3s;
-  }
 }
 
 .home-stats{
-  background-color: rgb(253, 198, 9);
+  background-color: var(--light-blue);
   gap: 3rem;
-  padding: 5rem 4rem;
+  padding: 4rem 3rem;
+  padding-bottom: 6rem;
+  border-radius: 14rem 0 0 14rem;
+  width: 95%;
+  margin-left: 5%;
 
   .heading{
     color: black;
@@ -174,19 +235,18 @@
   .stats{
     gap: 1.75rem;
     width: 90%;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    margin: 0 auto;
 
     .card{
-      min-height: 200px;
-      max-height: 350px;
-      min-width: 290px;
-      max-width: 400px;
-      width: 30%;
+      width: 100%;
       text-align: center;
       color: black;
       background-color: white;
-      border-radius: 1.25rem;
-      padding: 2.5rem 3rem;
+      border-radius: 2rem;
+      padding: 1.5rem 1.25rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -250,24 +310,29 @@
 
   .blogs{
     gap: 2rem;
+    width: 94%;
+    margin: 0 auto;
 
     .card-holder{
       flex-flow: row;
       overflow: scroll;
       gap: 1.25rem;
       width: 100%;
-      justify-content: space-around;
+      justify-content: center;
+      padding: 1rem .35rem;
 
       .card{
-        width: 100%;
+        width: 95%;
         max-width: 470px;
-        background-color: #eee;
-        border-radius: 1.25rem;
+        background-color: #fff;
+        border-radius: 1.45rem;
+        position: relative;
+        padding: 3px;
 
         .image-container{
           width: 100%;
-          height: 200px;
-          border-radius: 1.25rem 1.25rem 0 0;
+          height: 220px;
+          border-radius: 1.25rem ;
           overflow: hidden;
 
           img{
@@ -280,6 +345,32 @@
         .text-container{
           padding: 1rem 1.75rem;
         }
+      }
+
+      .card::after{
+        width: 100%;
+        height: 100%;
+        background: rgb(103,118,255);
+        background: linear-gradient(140deg, rgba(103,118,255,1) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 100%);
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        border-radius: 1.5rem;
+        z-index: -1;
+      }
+
+      .card::before{
+        width: 100%;
+        height: 100%;
+        background: rgb(244,245,250);
+        background: linear-gradient(135deg, rgba(244,245,250,1) 0%, rgba(255,255,255,1) 65%, rgba(103,118,255,1) 100%);
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        border-radius: 1.5rem;
+        z-index: -1;
       }
     }
   }

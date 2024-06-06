@@ -13,6 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
   --sec-green: rgb(4, 120, 87);
   --text-green: rgb(1, 57, 36);
+  --sec-blue: rgb(12,3,60);
+  --light-blue: rgb(234, 240, 255);
 }
 
 body {

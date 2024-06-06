@@ -19,7 +19,7 @@ function App() {
 
       <Footer />
       <div className="copyright font-14 text-center color-white">
-        @2024 Future Schools. All rights reserved
+        Copyright @2024 Future Schools. All rights reserved
       </div>
     </div>
   )

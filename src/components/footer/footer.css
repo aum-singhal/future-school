@@ -1,44 +1,82 @@
 .footer{
-  background-color: var(--sec-green);
-  padding: 2rem 3rem;
-  justify-content: space-evenly;
-
-  .left{
-    width: 60%;
-    justify-content: space-between;
-    .about{
-      width: 60%;
-    } 
+  position: relative;
   
-    .links{
-      gap: .35rem;
-      width: 30%;
+  .bottom-container{
+    background-color: var(--sec-blue);
+    border-radius: 100% 100% 0 0;
+    width: 100%;
+    padding: 4rem;
+    padding-top: 8rem;
+
+    .left{
+      width: 80%;
+      justify-content: space-between;
+      .about{
+        width: 45%;
+      } 
+    
+      .links{
+        gap: .35rem;
+        width: 30%;
+      }
+
+      .social{
+        width: 10%;
+      }
     }
   }
 
   .contact{
-    gap: .5rem;
-    width: 30%;
+    gap: .75rem;
+    width: 60%;
+    position: relative;
+    background-color: white;
+    padding: 2rem 6rem;
+    padding-top: 1.5rem;
+    border-radius: 2rem;
+    top: 5.5rem;
 
     input, textarea{
       background-color: transparent;
       padding: .25rem .5rem;
       border: 0 solid;
-      border-bottom: 1px solid #c3c3c3;
+      border-bottom: 1px solid rgba(103,118,255, .7);
       resize: none;
-      width: 100%;
+      width: 80%;
+      color: black;
+      font-weight: 500;
+      border-radius: .125rem;
 
       &::placeholder{
-        color: #eaeaea;
+        color: #444444;
       }
     }
 
     button{
-      background-color: #eee;
-      color: black;
+      background-color: rgb(103,118,255);
+      color: white;
       border: 0 solid;
-      padding: .25rem .5rem;
-      border-radius: .25rem;;
+      padding: .75rem .5rem;
+      border-radius: .7rem;
+      width: 20%;
+      margin-top: .5rem;
+
+      &:hover{
+        background-color: rgb(87, 103, 251);
+      }
+    }
+
+    &::before{
+      background: rgb(103,118,255);
+      background: linear-gradient(180deg, rgba(103,118,255,1) 0%, rgba(255,255,255,1) 65%, rgba(255,255,255,1) 56%, rgba(244,245,250,1) 100%);
+      content: "";
+      width: calc(100% + 8px);
+      height: 100%;
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      z-index: -1;
+      border-radius: 2.25rem;
     }
   }
 }
