@@ -15,8 +15,8 @@ export const HomeInnovation = () => {
 
   const blogs = [
     {title: "blog 1", img: blog, desc: "lorem Ipsum is Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum"},
-    {title: "blog 1", img: blog, desc: "lorem Ipsum is Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum"},
-    {title: "blog 1", img: blog, desc: "lorem Ipsum is Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum"},
+    {title: "blog 2", img: blog, desc: "lorem Ipsum is Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum"},
+    {title: "blog 3", img: blog, desc: "lorem Ipsum is Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum and Lorem Ipsum is a Lorem Ipsum"},
   ]
   return <div className="home-innovation section flex-d-col">
     <Fade triggerOnce direction="up">

@@ -1,4 +1,6 @@
 import "./footer.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {faLinkedinIn} from '@fortawesome/free-solid-svg-icons';
 
 export const Footer = () => {
   return <div className="footer flex-d-col flex-a-cen">
@@ -23,7 +25,7 @@ export const Footer = () => {
           <div className="item">Blogs</div>
         </div>
         <div className="social flex-d-col">
-
+        <FontAwesomeIcon icon="fa-brands fa-linkedin-in" />
         </div>
       </div>
     </div>
