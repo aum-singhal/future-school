@@ -4,11 +4,13 @@ import { Navbar } from './components/navbar/navbar'
 import { Routes, Route } from 'react-router-dom'
 import { AboutPage } from './pages/about'
 import { Footer } from './components/footer/footer'
+import { ScrollToTop } from './scrollToTop'
 
 function App() {
 
   return (
     <div className="App">
+      <ScrollToTop />
       <Navbar />
 
       <Routes>

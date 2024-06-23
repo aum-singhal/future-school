@@ -8,7 +8,7 @@ export const AboutJoin = () => {
   return <div className="about-join flex-a-cen-j-cen">
     <div className="left font-24 semi-bold flex-d-col">
       <Fade direction="up" triggerOnce damping={0.3} cascade>
-        <div className="head font-48 bold">Join us NOW!!</div>
+        <div className="head font-56 extra-bold">Join us NOW!!</div>
         <div onClick={()=>setSelection(0)} className="school cursor-pointer">As School</div>
         <div onClick={()=>setSelection(1)} className="user cursor-pointer">As Member</div>
       </Fade>

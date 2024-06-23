@@ -80,7 +80,7 @@ export const AboutMap = () => {
               <img src={schoolData[selectIndex].cover} alt="" />
             </div>
             <div className="text flex-d-col">
-              <div className="name font-28 semi-bold">{schoolData[selectIndex].name}</div>
+              <div className="name font-36 bold">{schoolData[selectIndex].name}</div>
               <div className="desc font-16 ">{schoolData[selectIndex].desc}</div>
             </div>
       </div>
