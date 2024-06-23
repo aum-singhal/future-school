@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export const Footer = () => {
   return <div className="footer flex-d-col flex-a-cen">
 
-    <form className="contact flex-d-col flex-a-cen">
+    <form id="contact" className="contact flex-d-col flex-a-cen">
       <div className="text-center font-40 bold">Get In Touch</div>
       <input type="text" name="name" id="name" placeholder="Name" />
       <input type="email" name="email" id="email" placeholder="Email" />
