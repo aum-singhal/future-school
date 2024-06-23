@@ -3,6 +3,7 @@ import one from "../../assets/team/one.jpeg";
 import two from "../../assets/team/two.jpeg";
 import three from "../../assets/team/three.jpeg";
 import four from "../../assets/team/four.jpeg";
+import { Fade } from "react-awesome-reveal";
 
 export const AboutTeam = () => {
   const team = [
@@ -15,22 +16,24 @@ export const AboutTeam = () => {
   return <div className="about-team flex-d-col">
     <div className="heading bold font-40 text-center">Our Team</div>
     <div className="cards-container flex-j-cen">
-      {
-        team.map((item, index) => {
-          return <div className="card flex" key={index}>
-            <div className="image-container">
-              <img src={item.img} alt="" />
-            </div>
-            <div className="text-container flex-d-col">
-              <div className="top flex-d-col">
-                <div className="name semi-bold font-24">{item.name}</div>
-                <div className="email font-18">{item.email}</div>
+      <Fade direction="up" triggerOnce cascade damping={0.2}>
+        {
+          team.map((item, index) => {
+            return <div className="card flex" key={index}>
+              <div className="image-container">
+                <img src={item.img} alt="" />
               </div>
-              <div className="desc font-16">{item.desc}</div>
+              <div className="text-container flex-d-col">
+                <div className="top flex-d-col">
+                  <div className="name semi-bold font-24">{item.name}</div>
+                  <div className="email font-18">{item.email}</div>
+                </div>
+                <div className="desc font-16">{item.desc}</div>
+              </div>
             </div>
-          </div>
-        })
-      }
+          })
+        }
+      </Fade>
     </div>
   </div>
 }

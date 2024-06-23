@@ -2,6 +2,7 @@ import "./about.css";
 import one from "../../assets/innovate/one.jpeg";
 import three from "../../assets/innovate/three.jpeg";
 import five from "../../assets/innovate/five.jpeg";
+import { Fade } from "react-awesome-reveal";
 
 export const AboutAdvantages = () => {
   const data = [
@@ -10,7 +11,8 @@ export const AboutAdvantages = () => {
     {head: "Student Centered", img: three},
   ]
 
-  return <div className="about-advantages flex-d-col">
+  return <Fade direction="up" triggerOnce className="about-advantages flex-d-col">
+    <>
     <div className="text-center heading bold font-40">Advantages</div>
 
     <div className="card-holder flex">
@@ -23,5 +25,6 @@ export const AboutAdvantages = () => {
         })
       }
     </div>
-  </div>
+    </>
+  </Fade>
 }

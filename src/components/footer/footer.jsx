@@ -1,6 +1,9 @@
 import "./footer.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import {faLinkedinIn} from '@fortawesome/free-solid-svg-icons';
+import linkedin from "../../assets/social/linkedin.png";
+import facebook from "../../assets/social/facebook.png";
+import instagram from "../../assets/social/instagram.png";
 
 export const Footer = () => {
   return <div className="footer flex-d-col flex-a-cen">
@@ -25,7 +28,9 @@ export const Footer = () => {
           <div className="item">Blogs</div>
         </div>
         <div className="social flex-d-col">
-        <FontAwesomeIcon icon="fa-brands fa-linkedin-in" />
+        <img src={linkedin} alt="" />
+        <img src={facebook} alt="" />
+        <img src={instagram} alt="" />
         </div>
       </div>
     </div>
