@@ -10,7 +10,6 @@ export const Navbar = () => {
     <div className="menu medium-bold flex-a-cen">
       <div onClick={()=> nav("/")} className="item">Home</div>
       <div onClick={()=> nav("/about")} className="item">About Us</div>
-      <div className="item">Blogs</div>
     </div>
     <button onClick={()=> nav("/#contact")} className="join semi-bold cursor-pointer">Join Now</button>
   </div>
